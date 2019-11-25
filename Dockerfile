@@ -16,7 +16,7 @@ RUN set -x \
     && rm -rf /var/cache/apk/*
 
 RUN rm -rf /var/cache/apk/* 
-RUN touch /var/log/squid/access.log
+#RUN touch /var/log/squid/access.log
 #VOLUME ["/etc/samba","/var/lib/samba"]
 
 EXPOSE 3128/tcp 3128/udp 
