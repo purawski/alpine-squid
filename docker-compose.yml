@@ -1,0 +1,25 @@
+version: '2.3'
+services:
+ proxy:
+  hostname: proxy
+  image: uraf/alpine-squid:4.8-r1
+  restart: always
+  dns_search: urawski.com
+  networks:
+    bridge:
+      aliases:
+        - proxy
+  #shm_size: '2gb'
+  ports:
+   - 3128:3128/tcp
+   - 3128:3128/udp
+  #environment:
+  #- DOCKER_USER=uraf
+  #- DOCKER_PASSWORD=uraf
+  #- DOCKER_USER_ID=1001
+  #volumes:
+  #- /home/uraf/code:/data/code
+  #- ./tmp:/tmp/temp
+  #cap_add:
+  #- NET_ADMIN
+  #- SYS_PTRACE
